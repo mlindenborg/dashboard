@@ -20,7 +20,7 @@ const ThemeSettings = () => {
             style={{ color: "rgb(153,171,180)", borderRadius: "50%" }}
             className="text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray"
           >
-            <MdOutlineCancel />
+            <MdOutlineCancel color={currentColor} />
           </button>
         </div>
         <div className="flex-col border-t-1 dark:border-t-2 border-color p-4 ml-4">
