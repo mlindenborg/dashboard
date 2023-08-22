@@ -34,17 +34,17 @@ const Navbar = () => {
     handleClick,
     isClicked,
     screenSize,
-    setscreenSize,
+    setScreenSize,
     currentColor,
   } = useStateContext();
 
   useEffect(() => {
-    const handleResize = () => setscreenSize(window.innerWidth);
+    const handleResize = () => setScreenSize(window.innerWidth);
     window.addEventListener("resize", handleResize);
     handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
-  }, [setscreenSize]);
+  }, [setScreenSize]);
 
   console.log(screenSize);
 
@@ -58,7 +58,7 @@ const Navbar = () => {
 
   return (
     /* Navigation buttons  */
-    <div className="flex justify-between p-2 md:mx-6 relative">
+    <div className="flex justify-between p-2 md:ml-6 md:mr-6 relative">
       <NavButton
         title="Menu"
         customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
