@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FiShoppingCart } from "react-icons/fi";
-import { BsArrowDown, BsChatLeft } from "react-icons/bs";
+import { BsChatLeft } from "react-icons/bs";
 import { RiNotification3Line } from "react-icons/ri";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
@@ -30,11 +30,9 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 
 const Navbar = () => {
   const {
-    activeMenu,
     setActiveMenu,
     handleClick,
     isClicked,
-    setisClicked,
     screenSize,
     setscreenSize,
     currentColor,
@@ -46,7 +44,7 @@ const Navbar = () => {
     handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [setscreenSize]);
 
   console.log(screenSize);
 
@@ -56,7 +54,7 @@ const Navbar = () => {
     } else {
       setActiveMenu(true);
     }
-  }, [screenSize]);
+  }, [screenSize, setActiveMenu]);
 
   return (
     /* Navigation buttons  */
@@ -94,7 +92,7 @@ const Navbar = () => {
           "
             onClick={() => handleClick("UserProfile")}
           >
-            <img src={avatar} className="rounded-full w-8 h-8" />
+            <img src={avatar} alt={avatar} className="rounded-full w-8 h-8" />
             <p>
               <span className="text-gray-400 text-14">Hi, </span>{" "}
               <span className="text-gray-400 font-bold ml-1 text-14">
