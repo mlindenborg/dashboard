@@ -1,13 +1,8 @@
 import React from "react";
-import { BsCurrencyDollar } from "react-icons/bs";
 import { GoDotFill } from "react-icons/go";
 
-import { Stacked, Pie, Button, SparkLine } from "../components";
-import {
-  earningData,
-  SparklineAreaData,
-  ecomPieChartData,
-} from "../data/dummy";
+import { Stacked, Button, SparkLine } from "../components";
+import { earningData, SparklineAreaData } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const Ecommerce = () => {
@@ -62,13 +57,13 @@ const Ecommerce = () => {
             <div className="flex justify-between">
               <p className="font-semibold text-xl">Revenue Updates</p>
               <div className="flex items-center gap-4">
-                <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
+                <p className="flex items-center gap-2 text-gray-400 hover:drop-shadow-xl">
                   <span>
                     <GoDotFill />
                   </span>
                   <span>Expense</span>
                 </p>
-                <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
+                <p className="flex items-center gap-2 text-green-300 hover:drop-shadow-xl">
                   <span>
                     <GoDotFill />
                   </span>
